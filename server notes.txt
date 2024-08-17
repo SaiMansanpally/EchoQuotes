@@ -1,0 +1,9 @@
+To run the server
+Open cmd
+Enter cd C:\
+Enter cd quotes-app
+Enter node app.js (http://localhost:3000)
+
+
+To restart the server
+Click Ctrl + c

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Quotes</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Best Quotes</h1>
+        <select id="categorySelect" onchange="window.location.href = this.value;">
+            <option value="/category/Life" selected>Life</option>
+            <option value="/category/Smile">Smile</option>
+            <option value="/category/Happy">Happy</option>
+            <option value="/category/Sad">Sad</option>
+            <option value="/category/Travel">Travel</option>
+        </select>
+    </header>
+    <main>
+        <div class="quotes-grid">
+            <% quotes.forEach(quote => { %>
+                <div class="quote-tile">
+                    <p class="quote-text"><%= quote.text %></p>
+                    <p class="quote-author">- <%= quote.author %></p>
+                </div>
+            <% }) %>
+        </div>
+    </main>
+    <script>
+        // Optional: Handle dropdown styling or behavior if needed
+    </script>
+</body>
+</html>

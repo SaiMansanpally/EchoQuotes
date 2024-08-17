@@ -1,0 +1,96 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    font-family: 'Aquire', sans-serif;
+}
+
+header {
+    background: #111;
+    color: #ff007f;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ff007f;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3em;
+    text-shadow: 0 0 10px #ff007f;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #222;
+    color: #ff007f;
+    text-shadow: 0 0 5px #ff007f;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+    background: linear-gradient(to bottom, #000, #111);
+}
+
+.quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.quote-tile {
+    background: #333;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.8);
+    transition: background 0.3s, transform 0.3s;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.quote-tile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 0, 127, 0.5), rgba(0, 0, 0, 0));
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 0;
+}
+
+.quote-tile:hover::before {
+    opacity: 1;
+}
+
+.quote-tile:hover {
+    background: #444;
+    transform: scale(1.05);
+}
+
+.quote-text {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #77aac2;
+    text-shadow: 0 0 5px #ff007f;
+    z-index: 1;
+    position: relative;
+}
+
+.quote-author {
+    font-size: 18px;
+    color: #ddd;
+    z-index: 1;
+    position: relative;
+}
